@@ -4,14 +4,22 @@ A Python library for grouping CSV files by field structure similarity. Useful fo
 
 ## Installation
 
+Install directly from GitHub:
+
 ```bash
-uv add csvgrouper
+uv add git+https://github.com/andybeatty/csvgrouper.git
 ```
 
-Or install from source:
+Or with pip:
 
 ```bash
-git clone <repo>
+pip install git+https://github.com/andybeatty/csvgrouper.git
+```
+
+For local development:
+
+```bash
+git clone https://github.com/andybeatty/csvgrouper.git
 cd csvgrouper
 uv sync
 ```
