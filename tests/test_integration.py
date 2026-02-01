@@ -198,7 +198,10 @@ class TestGroupingWithTestData:
         # Find tensile group
         tensile_group = None
         for g in groups.values():
-            if "sample_id" in g.canonical_headers and "yield_strength_mpa" in g.canonical_headers:
+            if (
+                "sample_id" in g.canonical_headers
+                and "yield_strength_mpa" in g.canonical_headers
+            ):
                 tensile_group = g
                 break
 
@@ -355,9 +358,7 @@ class TestDelimiterDetection:
 
     def test_handles_different_delimiters(self, grouper):
         # Create a semicolon-delimited file
-        with tempfile.NamedTemporaryFile(
-            mode="w", suffix=".csv", delete=False
-        ) as f:
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".csv", delete=False) as f:
             f.write("a;b;c\n")
             f.write("1;2;3\n")
             temp_path = f.name

@@ -94,7 +94,16 @@ class TestFieldType:
             assert isinstance(field_type.value, str)
 
     def test_expected_types_exist(self):
-        expected = {"string", "integer", "float", "boolean", "date", "datetime", "empty", "mixed"}
+        expected = {
+            "string",
+            "integer",
+            "float",
+            "boolean",
+            "date",
+            "datetime",
+            "empty",
+            "mixed",
+        }
         actual = {ft.value for ft in FieldType}
         assert actual == expected
 

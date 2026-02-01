@@ -11,6 +11,7 @@ from typing import Callable, Iterator
 
 class FieldType(Enum):
     """Inferred type for a CSV field based on sample values."""
+
     STRING = "string"
     INTEGER = "integer"
     FLOAT = "float"
@@ -24,6 +25,7 @@ class FieldType(Enum):
 @dataclass
 class CSVFile:
     """Represents a CSV file with its header and sample data."""
+
     path: str
     headers: list[str]
     sample_rows: list[list[str]] = field(default_factory=list)
@@ -60,6 +62,7 @@ class CSVFile:
 @dataclass
 class CSVGroup:
     """A group of CSV files with similar field structures."""
+
     name: str
     canonical_headers: list[str]
     files: list[CSVFile] = field(default_factory=list)
@@ -113,10 +116,7 @@ class CSVGrouper:
         self._processors: dict[str, Callable[[list[str]], None]] = {}
 
     def scan_directory(
-        self,
-        directory: str | Path,
-        recursive: bool = False,
-        pattern: str = "*.csv"
+        self, directory: str | Path, recursive: bool = False, pattern: str = "*.csv"
     ) -> list[CSVFile]:
         """
         Scan a directory for CSV files and extract their metadata.
@@ -205,9 +205,7 @@ class CSVGrouper:
         return FieldType.STRING
 
     def _infer_field_types(
-        self,
-        headers: list[str],
-        sample_rows: list[list[str]]
+        self, headers: list[str], sample_rows: list[list[str]]
     ) -> dict[str, str]:
         """Infer types for each field based on sample values."""
         field_types = {}
@@ -352,8 +350,7 @@ class CSVGrouper:
             data = json.load(f)
 
         self._groups = {
-            name: CSVGroup.from_dict(g)
-            for name, g in data.get("groups", {}).items()
+            name: CSVGroup.from_dict(g) for name, g in data.get("groups", {}).items()
         }
 
         # Rebuild files index from groups
@@ -365,9 +362,7 @@ class CSVGrouper:
         return self._groups
 
     def register_processor(
-        self,
-        group_name: str,
-        processor: Callable[[list[str]], None]
+        self, group_name: str, processor: Callable[[list[str]], None]
     ) -> None:
         """
         Register a processor function for a group.
@@ -393,10 +388,7 @@ class CSVGrouper:
         file_paths = self.get_files_in_group(group_name)
         self._processors[group_name](file_paths)
 
-    def iter_group_rows(
-        self,
-        group_name: str
-    ) -> Iterator[tuple[str, dict[str, str]]]:
+    def iter_group_rows(self, group_name: str) -> Iterator[tuple[str, dict[str, str]]]:
         """
         Iterate over all rows in all files of a group.
 
