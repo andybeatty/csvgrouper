@@ -1,0 +1,6 @@
+experiment_id,catalyst,temperature_k,pressure_bar,reactant_conc_mol_l,reaction_rate_mol_ls,conversion_pct,timestamp
+RXN-001,Pt/Al2O3,573,1.0,0.5,0.0023,45.2,2024-05-10T09:30:00
+RXN-002,Pt/Al2O3,623,1.0,0.5,0.0089,78.4,2024-05-10T10:15:00
+RXN-003,Pd/C,573,1.0,0.5,0.0018,38.1,2024-05-10T11:00:00
+RXN-004,Pd/C,623,1.0,0.5,0.0071,69.3,2024-05-10T11:45:00
+RXN-005,Pt/Al2O3,573,2.0,0.5,0.0041,62.7,2024-05-10T14:00:00

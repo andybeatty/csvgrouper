@@ -1,0 +1,6 @@
+test_date,sample_id,elongation_pct,ultimate_strength_mpa,yield_strength_mpa,temperature_c,material
+2024-04-01,AL-001,12,310,275,25,6061-T6
+2024-04-01,AL-002,10,295,260,100,6061-T6
+2024-04-02,AL-003,18,230,195,25,5052-H32
+2024-04-02,AL-004,16,215,180,100,5052-H32
+2024-04-03,AL-005,11,470,400,25,7075-T6

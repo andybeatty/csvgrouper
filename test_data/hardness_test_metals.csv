@@ -1,0 +1,6 @@
+sample_id,material,hardness_hv,hardness_hrc,test_date,temperature_c,notes
+HT-001,AISI 304,180,,2024-03-20,25,Solution annealed
+HT-002,AISI 316,185,,2024-03-20,25,Solution annealed
+HT-003,Tool Steel D2,58,62,2024-03-21,25,Hardened
+HT-004,Tool Steel M2,60,64,2024-03-21,25,Hardened
+HT-005,6061-T6 Al,107,,2024-03-22,25,Aged

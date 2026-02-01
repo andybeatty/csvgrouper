@@ -1,0 +1,6 @@
+sample_id,compound,wavelength_nm,absorbance,concentration_mm,solvent,temperature_k,timestamp
+UV-001,Methyl Orange,464,0.892,0.05,Water,298,2024-04-15T10:00:00
+UV-002,Methyl Orange,464,0.445,0.025,Water,298,2024-04-15T10:30:00
+UV-003,Bromothymol Blue,615,0.734,0.05,Water,298,2024-04-15T11:00:00
+UV-004,Rhodamine B,554,1.203,0.01,Ethanol,298,2024-04-15T14:00:00
+UV-005,Fluorescein,490,0.967,0.02,Water,298,2024-04-15T15:00:00

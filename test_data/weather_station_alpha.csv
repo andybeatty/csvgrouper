@@ -1,0 +1,6 @@
+station_id,timestamp,temperature_c,humidity_pct,pressure_hpa,wind_speed_ms,wind_direction_deg,precipitation_mm
+WX-ALPHA,2024-07-01T06:00:00,18.3,72,1013.2,3.2,180,0.0
+WX-ALPHA,2024-07-01T12:00:00,26.7,45,1012.8,5.1,225,0.0
+WX-ALPHA,2024-07-01T18:00:00,24.1,58,1011.5,4.3,210,0.0
+WX-ALPHA,2024-07-02T06:00:00,17.8,78,1009.3,6.8,270,2.4
+WX-ALPHA,2024-07-02T12:00:00,21.2,65,1010.1,8.2,285,5.1

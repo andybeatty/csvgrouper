@@ -1,0 +1,6 @@
+precipitation_mm,wind_direction_deg,wind_speed_ms,pressure_hpa,humidity_pct,temperature_c,timestamp,station_id
+0.0,145,2.8,1014.1,68,19.5,2024-07-01T06:00:00,WX-BETA
+0.0,190,4.5,1013.7,42,27.9,2024-07-01T12:00:00,WX-BETA
+0.0,175,3.9,1012.4,55,25.3,2024-07-01T18:00:00,WX-BETA
+1.8,260,7.1,1010.2,75,18.9,2024-07-02T06:00:00,WX-BETA
+3.2,275,9.0,1010.8,62,22.4,2024-07-02T12:00:00,WX-BETA

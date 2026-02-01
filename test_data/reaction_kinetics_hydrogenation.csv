@@ -1,0 +1,6 @@
+timestamp,experiment_id,conversion_pct,reaction_rate_mol_ls,reactant_conc_mol_l,pressure_bar,temperature_k,catalyst,h2_flow_sccm
+2024-06-01T08:00:00,HYD-001,92.1,0.0156,1.0,5.0,373,Ni/SiO2,50
+2024-06-01T09:30:00,HYD-002,87.3,0.0132,1.0,5.0,353,Ni/SiO2,50
+2024-06-01T11:00:00,HYD-003,95.8,0.0198,1.0,10.0,373,Ni/SiO2,100
+2024-06-01T14:00:00,HYD-004,78.9,0.0098,1.0,5.0,373,Pd/Al2O3,50
+2024-06-02T08:00:00,HYD-005,99.2,0.0245,1.0,10.0,393,Pd/Al2O3,100
