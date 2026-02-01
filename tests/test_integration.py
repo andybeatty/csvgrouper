@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pytest
 
-from csvgrouper import CSVGrouper, CSVFile, FieldType
+from csvgrouper import CSVGrouper, CSVFile
 
 
 # Path to test data relative to project root

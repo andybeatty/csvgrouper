@@ -408,8 +408,8 @@ class CSVGrouper:
     def summary(self) -> str:
         """Return a human-readable summary of current groupings."""
         lines = [
-            f"CSV Grouper Summary",
-            f"==================",
+            "CSV Grouper Summary",
+            "==================",
             f"Total files: {len(self._files)}",
             f"Total groups: {len(self._groups)}",
             "",
