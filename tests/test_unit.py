@@ -24,6 +24,13 @@ class TestCSVFile:
         file2 = CSVFile(path="/test/2.csv", headers=["c", "a", "b"])
         assert file1.field_set == file2.field_set
 
+    def test_field_set_normalizes_case_and_whitespace(self):
+        csv_file = CSVFile(
+            path="/test/file.csv",
+            headers=[" Name ", "EMAIL", " Value"],
+        )
+        assert csv_file.field_set == frozenset(["name", "email", "value"])
+
     def test_to_dict_roundtrip(self):
         original = CSVFile(
             path="/test/file.csv",
@@ -214,6 +221,18 @@ class TestCSVGrouperSimilarity:
         file1 = CSVFile(path="/1.csv", headers=["a", "b"])
         file2 = CSVFile(path="/2.csv", headers=[])
         assert grouper.compute_similarity(file1, file2) == 0.0
+
+    def test_case_differences_are_treated_as_matches(self):
+        grouper = CSVGrouper()
+        file1 = CSVFile(path="/1.csv", headers=["Name", "Email"])
+        file2 = CSVFile(path="/2.csv", headers=["name", "EMAIL"])
+        assert grouper.compute_similarity(file1, file2) == 1.0
+
+    def test_surrounding_whitespace_is_ignored(self):
+        grouper = CSVGrouper()
+        file1 = CSVFile(path="/1.csv", headers=[" name ", "value"])
+        file2 = CSVFile(path="/2.csv", headers=["name", " Value "])
+        assert grouper.compute_similarity(file1, file2) == 1.0
 
 
 class TestCSVGrouperGrouping:

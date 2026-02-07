@@ -34,8 +34,13 @@ class CSVFile:
 
     @property
     def field_set(self) -> frozenset[str]:
-        """Return headers as a frozen set for comparison."""
-        return frozenset(self.headers)
+        """Return normalized headers as a frozen set for comparison."""
+        return frozenset(self._normalize_header(header) for header in self.headers)
+
+    @staticmethod
+    def _normalize_header(header: str) -> str:
+        """Normalize a header for case-insensitive matching."""
+        return header.strip().casefold()
 
     def to_dict(self) -> dict:
         """Convert to dictionary for serialization."""
